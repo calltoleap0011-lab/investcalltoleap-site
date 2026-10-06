@@ -210,6 +210,8 @@
 .footer-links { display: flex; gap: 24px; flex-wrap: wrap; font-size: 15px; }
 .footer-brand { display: flex; gap: 15px; align-items: center; }
 .footer-brand img { width: 40px; }
+.reference-page-frame { display: block; width: 100%; border: 0; background: var(--background); }
+.reference-unavailable { padding-block: 80px; }
 @media (max-width: 767px) {
  .site-container { width: calc(100% - 40px); }
  .header-inner { min-height: 80px; }
