@@ -10,33 +10,156 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as FaqsRouteImport } from './routes/faqs'
+import { Route as FinancialFreedomFasterSignUpRouteImport } from './routes/financial-freedom-faster-sign-up'
+import { Route as InvestingClassSignUpRouteImport } from './routes/investing-class-sign-up'
+import { Route as OrgPaidAcceleratorBookingApplicationRouteImport } from './routes/org-paid-accelerator-booking-application'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as TermsOfServiceRouteImport } from './routes/terms-of-service'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqsRoute = FaqsRouteImport.update({
+  id: '/faqs',
+  path: '/faqs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FinancialFreedomFasterSignUpRoute =
+  FinancialFreedomFasterSignUpRouteImport.update({
+    id: '/financial-freedom-faster-sign-up',
+    path: '/financial-freedom-faster-sign-up',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InvestingClassSignUpRoute = InvestingClassSignUpRouteImport.update({
+  id: '/investing-class-sign-up',
+  path: '/investing-class-sign-up',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrgPaidAcceleratorBookingApplicationRoute =
+  OrgPaidAcceleratorBookingApplicationRouteImport.update({
+    id: '/org-paid-accelerator-booking-application',
+    path: '/org-paid-accelerator-booking-application',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsOfServiceRoute = TermsOfServiceRouteImport.update({
+  id: '/terms-of-service',
+  path: '/terms-of-service',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/faqs': typeof FaqsRoute
+  '/financial-freedom-faster-sign-up': typeof FinancialFreedomFasterSignUpRoute
+  '/investing-class-sign-up': typeof InvestingClassSignUpRoute
+  '/org-paid-accelerator-booking-application': typeof OrgPaidAcceleratorBookingApplicationRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms-of-service': typeof TermsOfServiceRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/faqs': typeof FaqsRoute
+  '/financial-freedom-faster-sign-up': typeof FinancialFreedomFasterSignUpRoute
+  '/investing-class-sign-up': typeof InvestingClassSignUpRoute
+  '/org-paid-accelerator-booking-application': typeof OrgPaidAcceleratorBookingApplicationRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms-of-service': typeof TermsOfServiceRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/faqs': typeof FaqsRoute
+  '/financial-freedom-faster-sign-up': typeof FinancialFreedomFasterSignUpRoute
+  '/investing-class-sign-up': typeof InvestingClassSignUpRoute
+  '/org-paid-accelerator-booking-application': typeof OrgPaidAcceleratorBookingApplicationRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms-of-service': typeof TermsOfServiceRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/contact'
+    | '/faqs'
+    | '/financial-freedom-faster-sign-up'
+    | '/investing-class-sign-up'
+    | '/org-paid-accelerator-booking-application'
+    | '/privacy-policy'
+    | '/terms-of-service'
+    | '/blog/$slug'
+    | '/blog/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/contact'
+    | '/faqs'
+    | '/financial-freedom-faster-sign-up'
+    | '/investing-class-sign-up'
+    | '/org-paid-accelerator-booking-application'
+    | '/privacy-policy'
+    | '/terms-of-service'
+    | '/blog/$slug'
+    | '/blog'
+  id:
+    | '__root__'
+    | '/'
+    | '/contact'
+    | '/faqs'
+    | '/financial-freedom-faster-sign-up'
+    | '/investing-class-sign-up'
+    | '/org-paid-accelerator-booking-application'
+    | '/privacy-policy'
+    | '/terms-of-service'
+    | '/blog/$slug'
+    | '/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContactRoute: typeof ContactRoute
+  FaqsRoute: typeof FaqsRoute
+  FinancialFreedomFasterSignUpRoute: typeof FinancialFreedomFasterSignUpRoute
+  InvestingClassSignUpRoute: typeof InvestingClassSignUpRoute
+  OrgPaidAcceleratorBookingApplicationRoute: typeof OrgPaidAcceleratorBookingApplicationRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  TermsOfServiceRoute: typeof TermsOfServiceRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +171,84 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faqs': {
+      id: '/faqs'
+      path: '/faqs'
+      fullPath: '/faqs'
+      preLoaderRoute: typeof FaqsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/financial-freedom-faster-sign-up': {
+      id: '/financial-freedom-faster-sign-up'
+      path: '/financial-freedom-faster-sign-up'
+      fullPath: '/financial-freedom-faster-sign-up'
+      preLoaderRoute: typeof FinancialFreedomFasterSignUpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/investing-class-sign-up': {
+      id: '/investing-class-sign-up'
+      path: '/investing-class-sign-up'
+      fullPath: '/investing-class-sign-up'
+      preLoaderRoute: typeof InvestingClassSignUpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/org-paid-accelerator-booking-application': {
+      id: '/org-paid-accelerator-booking-application'
+      path: '/org-paid-accelerator-booking-application'
+      fullPath: '/org-paid-accelerator-booking-application'
+      preLoaderRoute: typeof OrgPaidAcceleratorBookingApplicationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms-of-service': {
+      id: '/terms-of-service'
+      path: '/terms-of-service'
+      fullPath: '/terms-of-service'
+      preLoaderRoute: typeof TermsOfServiceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContactRoute: ContactRoute,
+  FaqsRoute: FaqsRoute,
+  FinancialFreedomFasterSignUpRoute: FinancialFreedomFasterSignUpRoute,
+  InvestingClassSignUpRoute: InvestingClassSignUpRoute,
+  OrgPaidAcceleratorBookingApplicationRoute:
+    OrgPaidAcceleratorBookingApplicationRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
+  TermsOfServiceRoute: TermsOfServiceRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const original = "https://invest.calltoleap.com";
+const original = "";
 function EmailButton() {
   return <Button asChild className="roadmap-button"><a href={QUICK_REPLY_HREF}>send an email for quicker replies</a></Button>;
 }
@@ -43,7 +43,7 @@ function Index() {
     <header className="site-header"><div className="site-container header-inner">
       <a className="brand" href="/"><img src={logo.url} alt="" />call to leap</a>
       <nav aria-label="Main navigation" className={`main-nav ${menuOpen ? "is-open" : ""}`}>
-        <a href="/">Home</a><a href={`${original}/financial-freedom-faster-sign-up`}>$1M Roadmap</a><a href={`${original}/investing-class-sign-up`}>Investing Class</a><a className="login-link" href={`${original}/login`}>Members Log In</a>
+        <Link to="/">Home</Link><Link to="/financial-freedom-faster-sign-up">$1M Roadmap</Link><Link to="/investing-class-sign-up">Investing Class</Link><a className="login-link" href="https://invest.calltoleap.com/login">Members Log In</a>
       </nav>
       <Button variant="ghost" size="icon" className="mobile-menu" aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}</Button>
     </div></header>
@@ -73,8 +73,8 @@ function Index() {
       <section className="members-section"><div className="site-container"><h2 className="section-title">What Our Members Say</h2><div className="testimonial-grid">{["zqzhghf2n1", "58nuxyr76e"].map((id, index) => <iframe key={id} className="member-video" src={`https://fast.wistia.net/embed/iframe/${id}`} title={`Call to Leap member testimonial ${index + 1}`} loading="lazy" allow="autoplay; fullscreen" allowFullScreen />)}</div></div></section>
       <EmailBand />
       <section className="team-section"><div className="site-container"><h2 className="section-title">Meet the Team</h2><img src={team.url} alt="The Call to Leap team" loading="lazy" /></div></section>
-      <section className="faq-section"><p>Have questions or want to see student results? Click here. ⬇️</p><Button asChild className="roadmap-button"><a href={`${original}/faqs?email=`}>FAQs &amp; Student Results</a></Button></section>
+      <section className="faq-section"><p>Have questions or want to see student results? Click here. ⬇️</p><Button asChild className="roadmap-button"><Link to="/faqs">FAQs &amp; Student Results</Link></Button></section>
     </main>
-    <footer className="site-footer"><div className="site-container footer-inner"><div className="footer-brand"><img src={logo.url} alt="" /><span>© 2026 call to leap</span></div><nav aria-label="Footer navigation" className="footer-links">{[["Contact", "contact"], ["FAQ's", "faqs"], ["Privacy Policy", "privacy-policy"], ["Terms of Service", "terms-of-service"], ["Contact", "contact"], ["Blog", "blog"]].map(([label, path], i) => <a key={i} href={`${original}/${path}`}>{label}</a>)}</nav></div></footer>
+    <footer className="site-footer"><div className="site-container footer-inner"><div className="footer-brand"><img src={logo.url} alt="" /><span>© 2026 call to leap</span></div><nav aria-label="Footer navigation" className="footer-links"><Link to="/contact">Contact</Link><Link to="/faqs">FAQ's</Link><Link to="/privacy-policy">Privacy Policy</Link><Link to="/terms-of-service">Terms of Service</Link><Link to="/contact">Contact</Link><Link to="/blog" search={{ page: 1 }}>Blog</Link></nav></div></footer>
   </>;
 }
