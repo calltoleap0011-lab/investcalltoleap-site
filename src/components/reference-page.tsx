@@ -26,7 +26,7 @@ export function ReferencePage({ path }: { path: string }) {
   const frame = useRef<HTMLIFrameElement>(null);
   const [height, setHeight] = useState(1800);
   const search = useSearch({ strict: false }) as Record<string, unknown>;
-  const pageNumber = Number(search.page ?? 1);
+  const pageNumber = Number(search['page'] ?? 1);
   const page = getReferencePage(path === "blog" && pageNumber > 1 ? `blog?page=${pageNumber}` : path);
   useEffect(() => {
     function onMessage(event: MessageEvent) {
