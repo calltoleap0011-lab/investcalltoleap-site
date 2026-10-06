@@ -78,14 +78,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Investing | Call To Leap" },
+      { name: "description", content: "A simple, responsible way to start investing with Call to Leap." },
+      { property: "og:title", content: "Investing | Call To Leap" },
+      { property: "og:description", content: "A simple, responsible way to start investing with Call to Leap." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
@@ -93,6 +91,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic&display=swap" },
     ],
   }),
   shellComponent: RootShell,
