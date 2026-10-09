@@ -1,0 +1,6 @@
+{
+  // Deploy identity for Cloudflare. Nitro's cloudflare-module preset merges this
+  // into the generated server config, and supplies main/assets/compat settings itself.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "investcalltoleap-site"
+}
