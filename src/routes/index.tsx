@@ -43,7 +43,7 @@ function Index() {
     <header className="site-header"><div className="site-container header-inner">
       <a className="brand" href="/"><img src={logo.url} alt="" />call to leap</a>
       <nav aria-label="Main navigation" className={`main-nav ${menuOpen ? "is-open" : ""}`}>
-        <Link to="/">Home</Link><Link to="/financial-freedom-faster-sign-up">$1M Roadmap</Link><Link to="/investing-class-sign-up">Investing Class</Link><a className="login-link" href="https://amazonai.lovable.app/login">Members Log In</a>
+        <Link to="/">Home</Link><Link to="/financial-freedom-faster-sign-up">$1M Roadmap</Link><Link to="/investing-class-sign-up">Investing Class</Link><a className="login-link" href="https://amazonai.lovable.app">Members Log In</a>
       </nav>
       <Button variant="ghost" size="icon" className="mobile-menu" aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}</Button>
     </div></header>
